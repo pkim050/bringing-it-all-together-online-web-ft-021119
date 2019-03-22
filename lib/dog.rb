@@ -44,4 +44,5 @@ class Dog
       DB[:conn].execute(sql, self.name, self.breed)
       @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs").flatten.first
     end
+  end
 end
