@@ -19,11 +19,7 @@ class Dog
   end
 
   def self.new_from_db(array)
-    dog = self.new
-    dog.id = array[0]
-    dog.name = array[1]
-    dog.breed = array[2]
-    dog
+    dog = self.new(name: array[1], breed: array[2], id: array[0])
   end
 
   def self.find_by_name(name)
