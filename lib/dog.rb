@@ -24,7 +24,8 @@ class Dog
 
   def self.find_by_name(name)
     sql = "SELECT * FROM dogs WHERE name = ?"
-    DB[:conn].execute(sql, name).first
+    temp = DB[:conn].execute(sql, name).first
+    binding.pry
   end
 
   def update
