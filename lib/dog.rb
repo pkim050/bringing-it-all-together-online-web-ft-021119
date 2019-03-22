@@ -62,7 +62,7 @@ class Dog
       dog_temp = dog.first
       dog = Dog.new(name: dog_temp[1], breed: dog_temp[2], id: dog_temp[0])
     else
-      dog = Dog.create(name: name, brand: brand)
+      dog = Dog.create(name: name, breed: breed)
     end
     dog
   end
